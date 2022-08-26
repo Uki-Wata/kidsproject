@@ -1,0 +1,19 @@
+<body class="welcome_body">
+  <div class="welcome_container w-container">
+    <div class="w-layout-grid welcome_grid"><img src="/assets/IMG_0071.jpg" loading="lazy" width="187" id="w-node-_3fa3a395-20fc-0d57-a027-cb2c9b5aaefc-1d17b91f" srcset="/assets/IMG_0071-p-500.jpeg 500w, /assets/IMG_0071-p-800.jpeg 800w, /assets/IMG_0071.jpg 923w" sizes="(max-width: 479px) 40vw, 187px" alt="" class="welcome_image">
+      <div id="w-node-_3fa3a395-20fc-0d57-a027-cb2c9b5aaf00-1d17b91f" class="welcome_explanation">これは教育用デモサイトです</div>
+      <div id="w-node-_3fa3a395-20fc-0d57-a027-cb2c9b5aaf02-1d17b91f" class="w-form">
+        <%=form_with class:"welcome_form" do |f|%>
+          <%=f.label :name,'Name',class: "field-label" %>
+          <%=f.text_field :name,class: "text-field w-input"%>
+          <%=f.label :password, 'Password',class: "field-label-2" %>
+          <%=f.password_field :password,class: "text-field-4 w-input" %>
+          <%=f.submit'login',class: "submit-button w-button"%>
+          <% end %>
+        <div class="success-message w-form-done"></div>
+        <div class="w-form-fail"></div>
+      </div>
+      <div id="w-node-fe80ace0-a928-f3b9-4699-9815aa2522a1-1d17b91f" class="welcome-text-block"><strong class="welcome-text"> WataSns</strong></div>
+    </div>
+  </div>
+</body>

@@ -1,0 +1,41 @@
+<script>
+    window.onload = function() {
+      var list = document.getElementById('chat_list');
+      list.scrollIntoView(false);
+      console.log('scroll');
+    };
+</script>
+<body class="chat_body">　　
+  <div class="w-layout-grid grid-2">
+    <%= render 'layouts/header' %>
+    <%= render 'layouts/sidebar' %>
+    <div id="w-node-_74973b60-85bf-a7a1-81bf-cb019089d95c-83c33f47" class="section4 wf-section">
+      <div class="w-layout-grid grid-8">
+        <div id="w-node-_0695e046-c7d6-5b1c-4d5d-b21f24a5fed7-83c33f47" class="div-block-11">
+          <div id="w-node-_1bab88e5-7015-0e0a-f537-600303a8d657-83c33f47" class="text-block-5"><strong class="bold-text-9">masa</strong></div>
+        </div>
+        <div id="w-node-f243cacb-87ab-b1dd-9265-03244f00707f-83c33f47" class="div-block-9">
+          <ul role="list" class="chat_list" id='chat_list'>
+          </ul>
+        </div>
+        <div id="w-node-_569671a7-8753-118d-b8fa-3dd0c8c2a0db-83c33f47" class="div-block-13">
+            <input type="text" id='message' id="w-node-_23b98970-6fe2-73d9-fef1-8bcea9e95888-83c33f47" class="text-block-7">
+            <button id="w-node-_7252a8ae-a20b-ef31-ca0a-f93fcaf91e19-83c33f47" type="button" class="button-2 w-button">送信</button>
+            <script>
+            (() => {
+              const btn = document.getElementById('w-node-_7252a8ae-a20b-ef31-ca0a-f93fcaf91e19-83c33f47');
+              btn.addEventListener('click', ()=>{
+                  const element = document.getElementById('chat_list');
+                  const message = document.getElementById('message');
+                  element.insertAdjacentHTML('beforeend', 
+                  '<li class="right_comment"><div class="w-layout-grid grid-7"><img src="/assets/IMG_0071.jpg" loading="lazy" width="102" id="w-node-b84d3dbd-6cf8-41a5-bd70-e02977a7b834-83c33f47" srcset="/assets/IMG_0071-p-500.jpeg 500w, /assets/IMG_0071-p-800.jpeg 800w, /assets/IMG_0071.jpg 923w" sizes="102px" alt="" class="image-2"><div id="w-node-b84d3dbd-6cf8-41a5-bd70-e02977a7b835-83c33f47" class="div-block-6"><div class="text-block-4">'+message.value+'</div></div></div></li>');
+                  element.scrollIntoView(false);
+                  document.getElementById('message').value = ""
+              }, false);
+            })();
+            </script>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
